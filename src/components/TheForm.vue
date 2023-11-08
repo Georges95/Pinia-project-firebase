@@ -53,7 +53,7 @@ const handleSubmit = () => {
 </script>
 
 <template>
-     <form @submit.prevent="handleSubmit">
+     <form @submit.prevent="tasksStore.addTask(name, description)">
         
         <div class="mb-3">
           <label for="name" class="form-label">Nom</label>

@@ -3,6 +3,16 @@ import TheHeader from '@/components/TheHeader.vue'
 import Sidebar from '@/components/Sidebar.vue'
 import ProjectList from '@/components/ProjectList.vue'
 import TheForm from './components/TheForm.vue'
+
+import { onMounted } from 'vue'
+import { useTasksStore } from './stores/tasks'
+
+const tasksStore = useTasksStore();
+
+onMounted(()=> {
+  tasksStore.getTasks();
+})
+
 </script>
 
 <template>

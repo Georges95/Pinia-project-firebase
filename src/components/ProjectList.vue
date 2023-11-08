@@ -13,6 +13,7 @@ const tasksStore = useTasksStore();
         <div class="form-check form-switch">
           <label :for="task.id"></label>
           <input 
+          @click="tasksStore.toggleCompleted(task.id)"
           v-model="task.completed"
           :id="task.id"
           class="form-check-input" 
